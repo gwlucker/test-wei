@@ -66,7 +66,7 @@ public class ProbabilitiesTest {
 
     @Test
     void testErrorNegaProba() {
-        //case probabiliy < 0f
+        //case probability < 0f
         List<ProbabilisticRandomGen.NumAndProbability> elements = Arrays.asList(
                 new ProbabilisticRandomGen.NumAndProbability(2, 0.5f),
                 new ProbabilisticRandomGen.NumAndProbability(3, 0.5f),
@@ -78,7 +78,7 @@ public class ProbabilitiesTest {
 
     @Test
     void testErrorSum() {
-        //case sum of probabiliy != 1f
+        //case sum of probability != 1f
         List<ProbabilisticRandomGen.NumAndProbability> elements = Arrays.asList(
                 new ProbabilisticRandomGen.NumAndProbability(2, 0.1f),
                 new ProbabilisticRandomGen.NumAndProbability(3, 0.1f)
