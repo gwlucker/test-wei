@@ -11,11 +11,14 @@ Time consume :
 ## day 3 : 90 min
 - improve EventBus with multi thread-send
 - using ConcurrentHashMap for thread safe subscriber handling
-30 min
 - implementation of ProbabilisticRandomGen
 
 ## day 4 : 60 min
 - review probabilities and add Test
 
-## day 5 : 120 min
-- implemente
+## day 5 : 60 min
+- implementation of Throttler and test
+
+## day 6 : 120 min
+- complet Throttler test
+- implementation of StatisticSlideWindows and Test

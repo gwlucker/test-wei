@@ -9,11 +9,11 @@ import org.homework.impl.Subscriber;
  * Some clients may only want to be notified when the statistics match certain criteria – e.g. the mean has gone above a threshold.
  * Do not assume that subscribers will be threadsafe. The add method may be called by a different thread than the callback should be made on.
  */
-public interface SlidingWindowStatistics<N extends Number> {
+public interface SlidingWindowStatistics<N> {
     void add(N measurement);
 
     // subscriber will have a callback that'll deliver a Statistics instance (push)
-    void subscribeForStatistics(Subscriber<Statistics> subscriber);
+    void subscribeForStatistics(Subscriber<Statistics> subscriber, EventFilter<Statistics> filter);
 
     // get latest statistics (poll)
     Statistics getLatestStatistics();

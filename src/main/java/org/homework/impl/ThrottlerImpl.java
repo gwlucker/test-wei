@@ -28,7 +28,7 @@ public class ThrottlerImpl implements Throttler {
         ThrottleResult result;
         synchronized (timestamps) {//thread safe on consume counter
             removeExpiredTimestamps(now);
-            if (timestamps.size() <= frequency) {
+            if (timestamps.size() < frequency) {
                 timestamps.add(now);//we suppose that once poll mode get the proceed token, it will proceed
                 result = ThrottleResult.PROCEED;
             } else {
